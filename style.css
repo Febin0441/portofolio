@@ -590,3 +590,139 @@ body.dark .cert-btn {
 body.dark a {
     color: #93c5fd;
 }
+/* =====================
+   GLOBAL RESPONSIVE FIX
+===================== */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* =====================
+   TABLETS (≤ 1024px)
+===================== */
+@media (max-width: 1024px) {
+
+    section {
+        padding: 70px 60px;
+    }
+
+    .hero-container {
+        gap: 40px;
+    }
+}
+
+/* =====================
+   MOBILE & SMALL TABLETS (≤ 768px)
+===================== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        flex-wrap: wrap;
+        padding: 15px 25px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: 60px 25px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-img img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    /* Skills grid */
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    /* Certificates & Contact */
+    .cert-grid,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Education timeline */
+    .edu-timeline::before {
+        left: 8px;
+    }
+
+    .edu-card {
+        padding-left: 45px;
+    }
+}
+
+/* =====================
+   SMALL PHONES (≤ 480px)
+===================== */
+@media (max-width: 480px) {
+
+    section {
+        padding: 50px 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero-img img {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .card,
+    .cert-card,
+    .contact-card,
+    .edu-card {
+        padding: 25px 20px;
+    }
+}
+
