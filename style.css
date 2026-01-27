@@ -19,18 +19,18 @@ html {
 
 body {
     background: #f8fafc;
-    color: #1e293b;
+    color: #0c1523;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
-
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* =====================
    NAVBAR
-===================== */
-/* =====================
-   NAVBAR – PERFECT ALIGNMENT
 ===================== */
 .navbar {
     position: sticky;
@@ -41,63 +41,101 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 40px;
+    padding: 14px 30px;
 }
 
-/* Left */
-.nav-left .logo {
-    color: #fff;
+.logo {
+    color: #07efc9;
     font-size: 22px;
     font-weight: 700;
     white-space: nowrap;
 }
+.nav-menu li a {
+    position: relative;
+}
 
-/* Center menu */
-.nav-center {
+.nav-menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #60a5fa;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+
+/* Menu */
+.nav-menu {
     display: flex;
     list-style: none;
     gap: 22px;
-    padding: 0;
-    margin: 0;
+    align-items: center;
 }
 
-.nav-center li a {
+.nav-menu li a {
     color: #e5e7eb;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     transition: 0.3s;
-    white-space: nowrap;
 }
 
-.nav-center li a:hover {
+.nav-menu li a:hover {
     color: #60a5fa;
 }
 
-/* Right */
-.nav-right {
+.nav-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
-/* Resume button */
-.nav-btn {
+/* Buttons */
+.btn {
     padding: 7px 16px;
-    font-size: 13px;
     border-radius: 20px;
+    font-size: 13px;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Theme toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #e5e7eb;
 }
 
 /* =====================
-   DARK MODE NAV FIX
-===================== */
-body.dark .navbar {
-    background: rgba(2, 6, 23, 0.95);
-}
-
-
-/* =====================
-   HERO SECTION
+   HERO
 ===================== */
 .hero {
     min-height: 90vh;
@@ -168,12 +206,14 @@ body.dark .navbar {
     }
 }
 
+
 /* =====================
    SECTIONS
 ===================== */
 section {
     padding: 80px 120px;
 }
+
 section:nth-child(even) {
     background: #ffffff;
 }
@@ -181,11 +221,11 @@ section:nth-child(even) {
 section:nth-child(odd) {
     background: #f1f5f9;
 }
+
 section h2 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
-    position: relative;
 }
 
 section h2::after {
@@ -218,60 +258,43 @@ section h2::after {
     gap: 20px;
     max-width: 1000px;
     margin: auto;
+    
 }
 
 .grid div {
     padding: 14px;
-    background: rgba(255,255,255,0.8);
+    
     border-radius: 30px;
     text-align: center;
     font-weight: 600;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .grid div:hover {
-    transform: translateY(-6px) scale(1.05);
+    transform: translateY(-6px);
     background: linear-gradient(135deg, #2563eb, #9333ea);
     color: white;
 }
 
 /* =====================
-   PROJECTS & EXPERIENCE
+   CARDS (PROJECTS / EXPERIENCE)
 ===================== */
 .card {
     max-width: 900px;
     margin: 25px auto;
     padding: 30px;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.9);
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transition: 0.4s;
-}
-#courses .card h3 {
-    color: #4338ca;
 }
 
-#courses .card p {
-    font-size: 15px;
-    color: #475569;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    font-size: 22px;
-    color: #1e40af;
-}
-
-.card span {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #475569;
-}
+/* =====================
+   COURSES
+===================== */
+/* =====================
+   CERTIFICATIONS
+===================== */
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -341,34 +364,10 @@ section h2::after {
     height: 0;
     overflow: hidden;
 }
-/* =====================
-   SKILL–CERTIFICATE MAPPING
-===================== */
-.skill-map {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
-}
 
-.skill-map span {
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 600;
-    background: #e0e7ff;
-    color: #1e40af;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
-
-.cert-card:hover .skill-map span {
-    background: linear-gradient(135deg, #2563eb, #9333ea);
-    color: white;
-}
 
 /* =====================
-   EDUCATION
+   EDUCATION TIMELINE
 ===================== */
 /* =====================
    EDUCATION – PREMIUM STYLE
@@ -504,6 +503,7 @@ section h2::after {
     text-decoration: underline;
 }
 
+
 /* =====================
    FOOTER
 ===================== */
@@ -512,235 +512,82 @@ footer {
     color: #cbd5f5;
     text-align: center;
     padding: 18px;
-    font-size: 14px;
+}
+
+/* =====================
+   DARK MODE
+===================== */
+body.dark {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark section {
+    background: #0f172a;
+}
+
+body.dark nav {
+    background: rgba(2,6,23,0.95);
+}
+
+body.dark .card,
+body.dark .edu-card,
+body.dark .cert-card,
+body.dark .contact-card {
+    background: #020617;
+}
+
+body.dark h2,
+body.dark h3 {
+    color: #93c5fd;
+}
+
+body.dark #about p {
+    color: #e5e7eb;
 }
 
 /* =====================
    RESPONSIVE
 ===================== */
 @media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15,23,42,0.98);
+        flex-direction: column;
+        gap: 18px;
+        padding: 25px 0;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
     section {
         padding: 60px 30px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    nav {
-        padding: 15px 30px;
-    }
-}
-/* =====================
-   DARK MODE TOGGLE BUTTON
-===================== */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #e5e7eb;
-    transition: 0.3s;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.2);
-}
-
-/* =====================
-   DARK MODE STYLES
-===================== */
-body.dark {
-    background: #0f172a;
-    color: #ffffff;
-}
-
-/* Sections */
-body.dark section:nth-child(even),
-body.dark section:nth-child(odd) {
-    background: #0f172a;
-}
-
-/* Navbar */
-body.dark nav {
-    background: rgba(2, 6, 23, 0.95);
-}
-
-/* Cards */
-body.dark .card,
-body.dark .edu-card,
-body.dark .cert-card,
-body.dark .contact-card {
-    background: #020617;
-    color: #e5e7eb;
-}
-
-/* Headings */
-body.dark h2,
-body.dark h3 {
-    color: #93c5fd;
-}
-
-/* Text */
-body.dark p,
-body.dark li,
-body.dark span {
-    color: #e6e7eb;
-}
-body.dark #about p {
-    color: #e5e7eb;
-}
-/* Skill tags */
-body.dark .grid div,
-body.dark .skill-map span {
-    background: #1e293b;
-    color: #e5e7eb;
-}
-
-/* Buttons */
-body.dark .btn,
-body.dark .cert-btn {
-    background: linear-gradient(135deg, #3b82f6, #6366f1);
-}
-
-/* Links */
-body.dark a {
-    color: #93c5fd;
-}
-/* =====================
-   GLOBAL RESPONSIVE FIX
-===================== */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-/* =====================
-   TABLETS (≤ 1024px)
-===================== */
-@media (max-width: 1024px) {
-
-    section {
-        padding: 70px 60px;
-    }
-
-    .hero-container {
-        gap: 40px;
-    }
-}
-
-/* =====================
-   MOBILE & SMALL TABLETS (≤ 768px)
-===================== */
-@media (max-width: 768px) {
-
-    /* Navbar */
-    nav {
-        flex-wrap: wrap;
-        padding: 15px 25px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-    }
-
-    /* Hero */
-    .hero {
-        min-height: auto;
-        padding: 60px 25px;
     }
 
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-    }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .hero-img img {
-        width: 220px;
-        height: 220px;
-    }
-
-    /* Headings */
-    h1 {
-        font-size: 34px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    /* Skills grid */
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-
-    /* Certificates & Contact */
-    .cert-grid,
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    /* Education timeline */
-    .edu-timeline::before {
-        left: 8px;
-    }
-
-    .edu-card {
-        padding-left: 45px;
+        gap: 40px;
     }
 }
 
-/* =====================
-   SMALL PHONES (≤ 480px)
-===================== */
 @media (max-width: 480px) {
-
-    section {
-        padding: 50px 20px;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 22px;
+    .hero-text h1 {
+        font-size: 30px;
     }
 
     .hero-img img {
         width: 180px;
         height: 180px;
     }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    p {
-        font-size: 15px;
-    }
-
-    .card,
-    .cert-card,
-    .contact-card,
-    .edu-card {
-        padding: 25px 20px;
-    }
 }
-
-
