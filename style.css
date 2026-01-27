@@ -18,10 +18,13 @@ html {
 }
 
 body {
-    background: linear-gradient(120deg, #eeeff0, #84cbf1);
+    background: #f8fafc;
     color: #1e293b;
     line-height: 1.7;
 }
+
+
+
 
 /* =====================
    NAVBAR
@@ -154,7 +157,13 @@ nav .btn:hover {
 section {
     padding: 80px 120px;
 }
+section:nth-child(even) {
+    background: #ffffff;
+}
 
+section:nth-child(odd) {
+    background: #f1f5f9;
+}
 section h2 {
     font-size: 36px;
     text-align: center;
@@ -504,4 +513,80 @@ footer {
     nav {
         padding: 15px 30px;
     }
+}
+/* =====================
+   DARK MODE TOGGLE BUTTON
+===================== */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #e5e7eb;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* =====================
+   DARK MODE STYLES
+===================== */
+body.dark {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* Sections */
+body.dark section:nth-child(even),
+body.dark section:nth-child(odd) {
+    background: #0f172a;
+}
+
+/* Navbar */
+body.dark nav {
+    background: rgba(2, 6, 23, 0.95);
+}
+
+/* Cards */
+body.dark .card,
+body.dark .edu-card,
+body.dark .cert-card,
+body.dark .contact-card {
+    background: #020617;
+    color: #e5e7eb;
+}
+
+/* Headings */
+body.dark h2,
+body.dark h3 {
+    color: #93c5fd;
+}
+
+/* Text */
+body.dark p,
+body.dark li,
+body.dark span {
+    color: #e6e7eb;
+}
+body.dark #about p {
+    color: #e5e7eb;
+}
+/* Skill tags */
+body.dark .grid div,
+body.dark .skill-map span {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+/* Buttons */
+body.dark .btn,
+body.dark .cert-btn {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+/* Links */
+body.dark a {
+    color: #93c5fd;
 }
