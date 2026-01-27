@@ -7,6 +7,8 @@
     <title>Febin Sabu Varghese | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 
 <nav>
@@ -25,6 +27,9 @@
 </a>
 </li>    
     </ul>
+    <button id="theme-toggle" class="theme-toggle">
+    🌙
+</button>
 </nav>
 
 <section id="home" class="hero">
@@ -37,7 +42,7 @@
         </div>
 
         <div class="hero-img">
-            <img src="Photograph.jpg" alt="Febin Sabu Varghese">
+            <img src="photograph.jpg" alt="Febin Sabu Varghese">
         </div>
 
     </div>
@@ -46,12 +51,15 @@
 
 <section id="about">
     <h2>About Me</h2>
-    <p>
-        Motivated and self-driven UI Designer with a BCA and currently pursuing MCA.
-        Specialized in creating efficient, user-friendly solutions using
-        Python, Django, MySQL, and Figma. Hands-on experience in
-        e-commerce platforms and social connection websites.
-    </p>
+    
+     <p>
+    MCA student with a strong interest in <strong>UI/UX Design and Web Development</strong>. 
+    Passionate about creating user-friendly interfaces and developing efficient web applications 
+    using <strong>Python, Django, PHP, MySQL, HTML, CSS, and JavaScript</strong>. 
+    Seeking opportunities as a <strong>UI/UX Designer or Web Developer</strong> to apply 
+    design thinking and technical expertise in real-world projects.
+</p>
+
 </section>
 
 <section id="skills">
@@ -270,7 +278,31 @@
 <footer>
     <p>© 2026 Febin Sabu Varghese</p>
 </footer>
+<script>
+    const toggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        toggle.textContent = "☀️";
+    }
+
+    toggle.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+            toggle.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+        } else {
+            toggle.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+    });
+</script>
 
 </body>
 </html>
+
+
 
