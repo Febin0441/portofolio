@@ -11,38 +11,48 @@
 
 <body>
 
-<nav>
-    <h2 class="logo">Personal data</h2>
-    <ul>
+<nav class="navbar">
+    <div class="nav-left">
+        <h2 class="logo">Personal data</h2>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-menu" id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#courses">Courses</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#courses">Courses & Certifications</a></li>
-        <li><a href="feb6in.pdf" download class="btn">
-    Download Resume
-</a>
-</li>    
+
+        <li class="nav-actions">
+            <a href="feb6in.pdf" download class="btn">Resume</a>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </li>
     </ul>
-    <button id="theme-toggle" class="theme-toggle">
-    🌙
-</button>
 </nav>
+
 
 <section id="home" class="hero">
     <div class="hero-container">
 
         <div class="hero-text">
-            <h1>Hi, I'm <span>Febin Sabu Varghese</span></h1>
+           <h1>Hi, I'm <span class="glow-name">Febin Sabu Varghese</span></h1>
             <p>UI Designer | Web Developer | MCA Student</p>
             
         </div>
 
         <div class="hero-img">
-            <img src="Photograph.jpg" alt="Febin Sabu Varghese">
+            <img src="photograph.jpg" alt="Febin Sabu Varghese">
         </div>
 
     </div>
@@ -300,10 +310,13 @@
         }
     });
 </script>
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
 
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+</script>
 </body>
 </html>
-
-
-
-
