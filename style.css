@@ -148,7 +148,7 @@ img {
    HERO
 ===================== */
 .hero {
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -732,3 +732,4 @@ body.dark .project-back .role {
 body.dark .project-front .tech {
     color: #cbd5f5;
 }
+
