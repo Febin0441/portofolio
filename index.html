@@ -52,7 +52,7 @@
         </div>
 
         <div class="hero-img">
-            <img src="Photograph.jpg" alt="Febin Sabu Varghese">
+            <img src="photograph.jpg" alt="Febin Sabu Varghese">
         </div>
 
     </div>
@@ -75,34 +75,118 @@
 <section id="skills">
     <h2>Technical Skills</h2>
     <div class="grid">
-        <div>HTML</div><div>CSS</div><div>JavaScript</div>
-        <div>PHP</div><div>Python</div><div>Django</div>
-        <div>C</div><div>C++</div><div>Java</div>
-        <div>MySQL</div><div>SQLite</div>
-        <div>Figma</div><div>Canva</div>
+        <div>Frontend:<br> HTML<br> CSS <br>JavaScript</div>
+           <div> Backend:<br> Python<br> Django<br> PHP</div>
+           <div>Database:<br> MySQL<br> SQLite</div>
+           <div> UI/UX Tools:<br> Figma<br> Canva</div>
+           <div> Programming:<br> C <br>C++<br>Java</div>
+       
     </div>
 </section>
-
+<section id="skills">
+    <h2>Soft Skills</h2>
+    <div class="grid">
+        <div>Problem Solving</div>
+           <div>Design Thinking</div>
+           <div>Team Collaboration</div>
+           <div>Communication</div>
+           <div>Time Management </div> 
+    </div>
+</section>
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
+    <div class="card project-card" onclick="toggleProject(this)">
+    
+    <!-- Title View -->
+    <div class="project-front">
         <h3>Online Musical Instrument Store</h3>
-        <p>
-            Web-based e-commerce platform allowing users to explore and
-            purchase musical instruments.
-        </p>
-        <span>HTML | CSS | JS | PHP | MySQL</span>
+        <p class="tech">HTML | CSS | JavaScript | PHP | MySQL</p>
+        <span class="hint">Click to view details</span>
     </div>
 
-    <div class="card">
-        <h3>Travel Companion Finder Website</h3>
-        <p>
-            Platform to connect travelers by destination, date, and preferences
-            with profile creation and safe messaging.
+    
+    <div class="project-back">
+        <h3>Online Musical Instrument Store</h3>
+        <p><strong>DESCRIPTION</strong><br>
+            Developed a full-stack e-commerce platform that allows users to browse,
+            search, and purchase musical instruments through a secure and user-friendly
+            interface. The system includes role-based access for administrators and
+            customers, product and inventory management, cart functionality, and
+            order processing with database integration.
         </p>
-        <span>HTML | CSS | JS | Django | SQLite</span>
     </div>
+
+</div>
+
+
+   <div class="card project-card" onclick="toggleProject(this)">
+
+    <!-- Front View -->
+    <div class="project-front">
+        <h3>Travel Companion Finder Website</h3>
+        <p class="tech">HTML | CSS | JavaScript | Django | SQLite</p>
+        <span class="hint">Click to view details</span>
+    </div>
+
+    <!-- Back View -->
+    <div class="project-back">
+        <h3>Travel Companion Finder Website</h3>
+
+        <p><strong>DESCRIPTION</strong><br>
+            Developed a web-based platform that helps travelers find suitable
+            companions based on destination, travel date, and personal preferences.
+            The system supports user registration, profile creation, and matching
+            features to improve travel safety and social connection.
+        </p>
+
+        <p>
+            The application focuses on user-friendly interface design,
+            profile-based search, and secure data handling using a
+            database-driven backend.
+        </p>
+
+        <span class="hint">Click to go back</span>
+    </div>
+
+</div>
+<div class="card project-card" onclick="toggleProject(this)">
+
+    <!-- Front -->
+    <div class="project-front">
+        <h3>AI Technical Case Study — Dynamic Pricing in E-Commerce</h3>
+        <p class="tech">Artificial Intelligence | Machine Learning | Reinforcement Learning</p>
+        <span class="hint">Click to view case study</span>
+    </div>
+
+    <!-- Back -->
+    <div class="project-back">
+        <h3>AI Technical Case Study — Dynamic Pricing in E-Commerce</h3>
+
+        <p>
+            Conducted a technical case study on AI-driven dynamic pricing
+            systems used in modern e-commerce platforms. Analyzed how
+            machine learning and reinforcement learning models are applied
+            to adjust prices in real time based on demand, competition,
+            and customer behavior.
+        </p>
+
+        <p>
+            The study covered pricing pipelines, demand forecasting models,
+            Q-learning concepts, optimization strategies, and ethical
+            considerations in automated pricing systems.
+        </p>
+
+        <p>
+            Focus areas included algorithm selection, real-time decision
+            workflows, and future AI pricing advancements.
+        </p>
+
+        <span class="hint">Click to go back</span>
+    </div>
+
+</div>
+
 </section>
 <section id="courses">
     <h2>Courses & Certifications</h2>
@@ -133,7 +217,7 @@
         <!-- Data Analytics Certificate -->
         <div class="cert-card">
             <i class="fa-solid fa-chart-line"></i>
-            <h3>Masterclass in Data Analytics</h3>
+            <h3>Masterclass in Data Analytics (30 Days)</h3>
             <p class="year">2025</p>
             <p>Novitech R&D Private Limited</p>
 
@@ -148,7 +232,23 @@
                 View Certificate
             </a>
         </div>
+<div class="cert-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Google Data Analytics Capstone: Complete a Case Study</h3>
+            <p class="year">2025</p>
+            <p>Coursera</p>
 
+            <div class="skill-map">
+                <span>Spreadsheet Software</span>
+                <span>Data Processing </span>
+                <span>Excel</span>
+                <span>Artificial Intelligence</span>
+            </div>
+
+            <a href="https://coursera.org/share/2b15f3149f04edf8eac9d42c120ab3e0" target="_blank" class="cert-btn">
+                View Certificate
+            </a>
+        </div>
         <!-- Cyber Security Certificate -->
         <div class="cert-card">
             <i class="fa-solid fa-shield-halved"></i>
@@ -237,14 +337,38 @@
         <h3>UI/UX Design Intern</h3>
         <p>Infotact Solutions | Feb 2025 – May 2025</p>
         <p>Worked on UI/UX design tasks and coding assignments in a remote team.</p>
+        <a href="https://www.linkedin.com/posts/febin-sabu-varghese-2ab2ab222_intership-on-ui-ux-activity-7334151278568030208-Q8P4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADftreMBma2UEBpnF9psJUClphoN7_fCUTA" download class="btn">Certificate</a>
     </div>
 
     <div class="card">
         <h3>UI/UX Intern</h3>
         <p>Zidio Development | May 2025 – Jul 2025</p>
         <p>Contributed to interface design and user-centered design processes.</p>
+        <a href="zidio.pdf" download class="btn">Certificate</a>
     </div>
 </section>
+<section id="recommendation">
+    <h2>Recommendation</h2>
+
+    <div class="lor-card">
+        <p class="lor-text">
+            I have received a <strong>Letter of Recommendation</strong> from an 
+            <strong>Assistant Professor, Rajagiri College of Management & Applied Sciences</strong>,
+            highlighting my academic performance, problem-solving skills, leadership qualities,
+            and dedication to learning in areas such as web programming, databases, and software development.
+        </p>
+
+        <p class="lor-author">
+            —  Sijo Jacob <br>Assistant Professor,<br>
+            Rajagiri College of Management & Applied Sciences,Kakkanad,Ernakulam
+        </p>
+
+        <a href="08.pdf" target="_blank" class="btn lor-btn">
+            View Letter of Recommendation (PDF)
+        </a>
+    </div>
+</section>
+
 
 <section id="contact">
     <h2>Get In Touch</h2>
@@ -318,6 +442,12 @@
         navMenu.classList.toggle("active");
     });
 </script>
+<script>
+    function toggleProject(card) {
+        card.classList.toggle("active");
+    }
+</script>
+
+
 </body>
 </html>
-
