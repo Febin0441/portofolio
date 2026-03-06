@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background: url("3.jpg") no-repeat center center fixed;
+    background: url("9.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #1e293b;
     line-height: 1.7;
@@ -30,8 +30,9 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    /* background: rgba(18, 14, 14, 0.6);  */
+    background: rgba(255, 255, 255, 0.35);
     z-index: -1;
+    display: none;
 }
 
 img {
@@ -148,7 +149,7 @@ img {
    HERO
 ===================== */
 .hero {
-    min-height: 75vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,8 +223,8 @@ img {
 ===================== */
 section {
    padding: 80px 120px;
-    background: rgba(255, 255, 255, 0.75); /* glass effect */
-    backdrop-filter: blur(10px);
+     background: rgba(255, 255, 255, 0.502);
+    backdrop-filter: blur(2px);
 }
 
 
@@ -582,21 +583,22 @@ footer {
    DARK MODE
 ===================== */
 body.dark {
-    background: url("3.jpg") no-repeat center center fixed;
+    background: url("9.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #e5e7eb;
-    background-color:#0f172a ;
+    /* background: rgba(2, 6, 23, 0.55);  */
+     ;
 }
 
-/* body.dark::before {
+ body.dark::before {
     background: rgba(2, 6, 23, 0.75);
-} */
+} 
 
 
 body.dark section {
-    background: #0f172a;
-    color: white;
+    background: rgba(2, 6, 23, 0.75);
 }
+
 
 body.dark nav {
     background: rgba(2,6,23,0.95);
@@ -732,5 +734,3 @@ body.dark .project-back .role {
 body.dark .project-front .tech {
     color: #cbd5f5;
 }
-
-
