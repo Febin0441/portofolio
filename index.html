@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Febin Sabu Varghese | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
 </head>
 
 
@@ -24,9 +25,6 @@
         <span></span>
         <span></span>
     </div>
-
-    <a href="feb6in.pdf" download class="btn">Resume</a>
-
     <button id="theme-toggle" class="theme-toggle">🌙</button>
 
 </div>
@@ -37,10 +35,10 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#courses">Courses</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#courses">Courses</a></li>
-          <li><a href="#recommendation">LOR</a></li>
+        <li><a href="#recommendation">LOR</a></li>
         <li><a href="#contact">Contact</a></li>
 
         
@@ -54,7 +52,7 @@
         <div class="hero-text">
            <h1>Hi, I'm <span class="glow-name">Febin Sabu Varghese</span></h1>
             <p>UI Designer | Web Developer | MCA Student</p>
-            
+            <a href="feb6in.pdf" download class="btn">Resume</a>
         </div>
 
         <div class="hero-img">
@@ -440,17 +438,21 @@
     });
 </script>
 <script>
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("nav-menu");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-</script>
-<script>
-    function toggleProject(card) {
-        card.classList.toggle("active");
+/* open / close menu */
+hamburger.addEventListener("click", (e) => {
+    navMenu.classList.toggle("active");
+    e.stopPropagation(); 
+});
+
+/* close menu when clicking anywhere */
+document.addEventListener("click", (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove("active");
     }
+});
 </script>
 
 
