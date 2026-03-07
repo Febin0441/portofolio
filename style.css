@@ -192,7 +192,7 @@ color:#60a5fa;
 
 
 .hero{
-min-height:65vh;      /* desktop */
+min-height:70vh;      /* desktop */
 display:flex;
 align-items:center;
 justify-content:center;
@@ -285,7 +285,7 @@ height:160px;
    SECTIONS
 ===================== */
 section {
-   padding:200px 50px;
+  padding:150px 50px;
      background: rgba(255, 255, 255, 0.502);
     backdrop-filter: blur(2px);
 }
@@ -812,3 +812,4 @@ body.dark .project-back .role {
 body.dark .project-front .tech {
     color: #cbd5f5;
 }
+
