@@ -192,7 +192,7 @@ color:#60a5fa;
 
 
 .hero{
-min-height:75vh;      /* desktop */
+min-height:80vh;      /* desktop */
 display:flex;
 align-items:center;
 justify-content:center;
@@ -256,7 +256,7 @@ padding:40px;
 @media (max-width:768px){
 
 .hero{
-min-height:auto;      /* remove forced height */
+min-height:60vh;      /* remove forced height */
 padding:60px 20px 30px;
 }
 
@@ -285,7 +285,7 @@ height:160px;
    SECTIONS
 ===================== */
 section {
-  padding:150px 50px;
+   padding:150px 50px;
      background: rgba(255, 255, 255, 0.502);
     backdrop-filter: blur(2px);
 }
@@ -812,5 +812,3 @@ body.dark .project-back .role {
 body.dark .project-front .tech {
     color: #cbd5f5;
 }
-
-
