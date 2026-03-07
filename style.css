@@ -192,7 +192,7 @@ color:#60a5fa;
 
 
 .hero{
-min-height:80vh;      /* desktop */
+min-height:85vh;      /* desktop */
 display:flex;
 align-items:center;
 justify-content:center;
@@ -812,3 +812,4 @@ body.dark .project-back .role {
 body.dark .project-front .tech {
     color: #cbd5f5;
 }
+
